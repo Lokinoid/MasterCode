@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D4F28052-2B56-4ABE-812A-27BC49C366BA}</ProjectGuid>
+    <RootNamespace>Trainer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Stanislav\Documents\opencv\build\include;C:\Users\Stanislav\Documents\boost_1_56_0\boost_1_56_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Stanislav\Documents\opencv\build\x86\vc12\bin;C:\Users\Stanislav\Documents\opencv\build\x86\vc12\lib;C:\Users\Stanislav\Documents\boost_1_56_0\boost_1_56_0\stage\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_core249d.lib;opencv_features2d249d.lib;opencv_imgproc249d.lib;opencv_highgui249d.lib;opencv_objdetect249d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CascadeClassifier.cpp" />
+    <ClCompile Include="..\src\CheckQualityConfig.cpp" />
+    <ClCompile Include="..\src\ClassifierTester.cpp" />
+    <ClCompile Include="..\src\ClassifierTrainer.cpp" />
+    <ClCompile Include="..\src\ConfigBase.cpp" />
+    <ClCompile Include="..\src\ConfigurationElement.cpp" />
+    <ClCompile Include="..\src\ConfigurationKeyPaths.cpp" />
+    <ClCompile Include="..\src\ConfigurationManager.cpp" />
+    <ClCompile Include="..\src\ConfigurationParser.cpp" />
+    <ClCompile Include="..\src\ConfigurationTester.cpp" />
+    <ClCompile Include="..\src\DescriptorConfigHOG.cpp" />
+    <ClCompile Include="..\src\DescriptorConfigurationFactory.cpp" />
+    <ClCompile Include="..\src\DescriptorConfigurator.cpp" />
+    <ClCompile Include="..\src\DescriptorTester.cpp" />
+    <ClCompile Include="..\src\Detector.cpp" />
+    <ClCompile Include="..\src\DetectorConfig.cpp" />
+    <ClCompile Include="..\src\EquationData.cpp" />
+    <ClCompile Include="..\src\ExternalSolverConfig.cpp" />
+    <ClCompile Include="..\src\FaceFeature.cpp" />
+    <ClCompile Include="..\src\FileDataPersister.cpp" />
+    <ClCompile Include="..\src\FileFinder.cpp" />
+    <ClCompile Include="..\src\FileLinesGetter.cpp" />
+    <ClCompile Include="..\src\FileLinesParser.cpp" />
+    <ClCompile Include="..\src\HOGDescriptor.cpp" />
+    <ClCompile Include="..\src\HOGSource.cpp" />
+    <ClCompile Include="..\src\ImageCollectionDevider.cpp" />
+    <ClCompile Include="..\src\ImageCollectionMerger.cpp" />
+    <ClCompile Include="..\src\ImageCollectionMultiplier.cpp" />
+    <ClCompile Include="..\src\ImageLandmarkData.cpp" />
+    <ClCompile Include="..\src\ImagePainter.cpp" />
+    <ClCompile Include="..\src\ImagePicker.cpp" />
+    <ClCompile Include="..\src\ImageTransformer.cpp" />
+    <ClCompile Include="..\src\ImageWriter.cpp" />
+    <ClCompile Include="..\src\LandmarkCollectionData.cpp" />
+    <ClCompile Include="..\src\LandmarkTester.cpp" />
+    <ClCompile Include="..\src\LLSSolver.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\MainController.cpp" />
+    <ClCompile Include="..\src\MatHelper.cpp" />
+    <ClCompile Include="..\src\NoiseProducer.cpp" />
+    <ClCompile Include="..\src\ProcrustesTransformer.cpp" />
+    <ClCompile Include="..\src\SIFTDescriptor.cpp" />
+    <ClCompile Include="..\src\StarFeature.cpp" />
+    <ClCompile Include="..\src\StatisticProduser.cpp" />
+    <ClCompile Include="..\src\StatisticTester.cpp" />
+    <ClCompile Include="..\src\TestFunctionFeature.cpp" />
+    <ClCompile Include="..\src\TestFunctionLandmarkData.cpp" />
+    <ClCompile Include="..\src\TestManager.cpp" />
+    <ClCompile Include="..\src\TrackerConfig.cpp" />
+    <ClCompile Include="..\src\TrainedData.cpp" />
+    <ClCompile Include="..\src\TrainedDataTest.cpp" />
+    <ClCompile Include="..\src\TrainingTest.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\CascadeClassifier.h" />
+    <ClInclude Include="..\src\CheckQualityConfig.h" />
+    <ClInclude Include="..\src\ClassifierTester.h" />
+    <ClInclude Include="..\src\ClassifierTrainer.h" />
+    <ClInclude Include="..\src\CommonTypes.h" />
+    <ClInclude Include="..\src\ConfigBase.h" />
+    <ClInclude Include="..\src\ConfigurationElement.h" />
+    <ClInclude Include="..\src\ConfigurationKeyPaths.h" />
+    <ClInclude Include="..\src\ConfigurationManager.h" />
+    <ClInclude Include="..\src\ConfigurationParser.h" />
+    <ClInclude Include="..\src\ConfigurationTester.h" />
+    <ClInclude Include="..\src\DataContainer.h" />
+    <ClInclude Include="..\src\DescriptorConfig.h" />
+    <ClInclude Include="..\src\DescriptorConfigHOG.h" />
+    <ClInclude Include="..\src\DescriptorConfigurationFactory.h" />
+    <ClInclude Include="..\src\DescriptorConfigurator.h" />
+    <ClInclude Include="..\src\DescriptorTester.h" />
+    <ClInclude Include="..\src\Detector.h" />
+    <ClInclude Include="..\src\DetectorConfig.h" />
+    <ClInclude Include="..\src\EquationData.h" />
+    <ClInclude Include="..\src\ExternalSolverConfig.h" />
+    <ClInclude Include="..\src\FaceFeature.h" />
+    <ClInclude Include="..\src\FileDataPersister.h" />
+    <ClInclude Include="..\src\FileFinder.h" />
+    <ClInclude Include="..\src\FileLinesGetter.h" />
+    <ClInclude Include="..\src\FileLinesParser.h" />
+    <ClInclude Include="..\src\HOGDescriptor.h" />
+    <ClInclude Include="..\src\HOGSource.h" />
+    <ClInclude Include="..\src\IDescriptor.h" />
+    <ClInclude Include="..\src\IFeature.h" />
+    <ClInclude Include="..\src\ImageCollectionDevider.h" />
+    <ClInclude Include="..\src\ImageCollectionMerger.h" />
+    <ClInclude Include="..\src\ImageCollectionMultiplier.h" />
+    <ClInclude Include="..\src\ImageLandmarkData.h" />
+    <ClInclude Include="..\src\ImagePainter.h" />
+    <ClInclude Include="..\src\ImagePicker.h" />
+    <ClInclude Include="..\src\ImageTransformer.h" />
+    <ClInclude Include="..\src\ImageWriter.h" />
+    <ClInclude Include="..\src\LandmarkCollectionData.h" />
+    <ClInclude Include="..\src\LandmarkTester.h" />
+    <ClInclude Include="..\src\LLSSolver.h" />
+    <ClInclude Include="..\src\MainController.h" />
+    <ClInclude Include="..\src\MatHelper.h" />
+    <ClInclude Include="..\src\NoiseProducer.h" />
+    <ClInclude Include="..\src\PlatformDependingConstants.h" />
+    <ClInclude Include="..\src\ProcrustesTransformer.h" />
+    <ClInclude Include="..\src\SIFTDescriptor.h" />
+    <ClInclude Include="..\src\StarFeature.h" />
+    <ClInclude Include="..\src\StatisticProduser.h" />
+    <ClInclude Include="..\src\StatisticTester.h" />
+    <ClInclude Include="..\src\TestFunctionFeature.h" />
+    <ClInclude Include="..\src\TestFunctionLandmarkData.h" />
+    <ClInclude Include="..\src\TestManager.h" />
+    <ClInclude Include="..\src\TrackerConfig.h" />
+    <ClInclude Include="..\src\TrainedData.h" />
+    <ClInclude Include="..\src\TrainedDataTest.h" />
+    <ClInclude Include="..\src\TrainingTest.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,78 @@
+%YAML:1.0
+# Directory with face images that are named: 0000001.jpg, 0000002.jpg, etc.
+imageDirectory: /Users/stanislav/Documents/Images/Faces/Aligned
+# 
+# Path of file with koordinates of landmarks for each face image from imageDirectory.
+landmarkDataFilePath: /Users/stanislav/Documents/Images/Faces/Aligned/DetectedLandmarksDataFilePath.txt
+# 
+# If needed to check landmarks on images visually and delete some of the images with corresponding landmarks from database
+# you can set "needToCheckQuality" flag to true.
+# Warning: check will break training.
+checkDataQualityParameters: 
+# If false then check is skipped and all parameters are ignored.
+    enabled: false
+# If true then manual check will be used. Press ',' , '.' buttons to go on previous/next image.
+# Also press space to delete image.
+# If false then check will be automatically.
+# Note: If face is not detected by Viola-Jones detection algorithm information will be deleted automatically. 
+    manual: false 
+# File path to persist new set of images and landmarks for them. If you don't want to persist new data set empty string.
+    newLandmarkDataFilePath: /Users/stanislav/Documents/Images/Faces/Aligned/CheckedLandmarksDataFilePath.txt
+# 
+# Detector is used to detect landmarks on single image individually.
+# To train landmark detector set enabled true.
+# Detector takes image as as input and returns set of landmarks as output.
+detectorParameters:
+# If false then detection is skipped and all parameters are ignored.
+    enabled: true
+# Path of file that will be produced as a result of detector training (should be .xml/ or .yml).
+    detectorDataFilePath: /Users/stanislav/Dropbox/Master_Thesis/Code/FaceDetectorData_HOGnew_16_8_9.xml
+# # Name of descriptor that is used for training.
+# Now only HOG & SIFT are supported for now
+    descriptorParameters:
+        name: HOG
+        windowSize: 16
+        strideSize: 8
+        cellSize: 8
+        binSize: 9
+# Number of training iterations
+    numberOfTrainIterations: 4
+# 
+# 
+# Tracker is used to detect landmarks on frame sequance on a video.
+# Landmark history detected on previous frame is needed.
+# To train landmark tracker set enabled true.
+# Tracker takes image and set of landmarks on previous frame as as input and returns set of landmarks as output.
+# !!! Warning !!! Cannot be used without detector, so you should train detector first.
+trackerParameters:
+# If false then tracker training is skipped and all parameters are ignored.
+    enabled: false
+# It is possible to store landmarks made by detector to a file. 
+# This is similar to landmarkData file but landmarkData is assumed as ideal landmarks 
+# and detectedLandmarkData - as landmarks are after detection.
+    detectedLandmarkDataFilePath: /Users/stanislav/Documents/Images/Faces/Aligned/DetectedLandmarksDataFilePath.txt
+# Path of file that will be produced as a result of trackes training (should be .xml/ or .yml).
+    trackerDataFilePath: /Users/stanislav/Dropbox/Master_Thesis/Code/FaceTrackerData_HOGnew_16_8_9.xml
+# Path of file that will be produced as a result of detector training (should be .xml/ or .yml).
+    detectorDataFilePath: /Users/stanislav/Dropbox/Master_Thesis/Code/FaceDetectorData_HOGnew_16_8_9.xml
+# # Name of descriptor that is used for training.
+# Now only HOG & SIFT are supported for now
+    descriptorParameters:
+        name: HOG
+        windowSize: 16
+        strideSize: 8
+        cellSize: 8
+        binSize: 9
+# Number of training iterations
+    numberOfTrainIterations: 4
+# 
+# !!! Next data is used for solving equations via Matlab
+# To enable external solver (e.g. Matlab) set true
+externalSolverParameters:
+# If true then external linear lest squares mechanism is used. Otherwise - native nonoptimized OpenCV.
+    enabled: true
+# Directory for input matrixes mat_X, mat_Y
+    inputMatrixDirectory: /Users/stanislav/Documents/Images/Faces/MatData/
+# Directory for output matrixes mat_B
+    outputMatrixDirectory: /Users/stanislav/Dropbox/Master_Thesis/Code/ResMatData/
+
