@@ -45,7 +45,14 @@ void MainController::StartWithConfigurationFilePath(const std::string& configura
     // get training data
     LandmarkCollectionDataPtr landmarkData = loadFaceLandmarkData(ConfigurationManager::TrainImageDirectory(),
                                                                   ConfigurationManager::LandmarkDataFilePath());
-    
+	if (!landmarkData)
+	{
+		std::cout << "No landmark data detected. Make sure that file " << ConfigurationManager::LandmarkDataFilePath()
+			<< " exists and filled properly and train images are in " << ConfigurationManager::TrainImageDirectory()
+			<< " directory" << std::endl;
+		CV_Assert(0);
+	}
+
     std::cout<<"Collection size "<<landmarkData->CollectionSize()<<std::endl;
     
     // check landmark data if needed
