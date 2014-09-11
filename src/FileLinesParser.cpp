@@ -7,8 +7,13 @@
 #include <boost/filesystem.hpp>
 #include <boost/optional.hpp>
 #include <boost/tokenizer.hpp>
-#include "FileLinesGetter.h"
 #include <iostream>
+
+#include "FileLinesGetter.h"
+#include "ConfigurationManager.h"
+#include "DescriptorConfigHOG.h"
+#include "DetectorConfig.h"
+#include "ConfigurationKeyPaths.h"
 
 
 typedef boost::char_separator<char>                       separatorType;
@@ -22,6 +27,24 @@ int numberOfRowFromFileName(const std::string& filePath)
   int number = std::stoi(fileName.substr(5)); // matB_
   
   return number;
+}
+
+int numberOfColumns()
+{
+	int descriptorLength = 0;
+	// Descriptor dependencies: 49 (points) * descriptor_length + 1
+	// length: SIFT 128
+	//         HOG bins * window.height / cell.height * window.width / cell.width
+	const IDescriptorConfig* descriptorConfig = ConfigurationManager::DetectorConfiguration()->DescriptorConfiguration();
+	if (descriptorConfig->DescriptorName() == config::kDescriptorHOGName)
+	{
+		const DescriptorConfigHOG* hogDescriptor = dynamic_cast<const DescriptorConfigHOG*>(descriptorConfig);
+		int windowSize = hogDescriptor->WindowSize();
+		int cellSize = hogDescriptor->CellSize();
+		descriptorLength = hogDescriptor->Bins() * windowSize / cellSize * windowSize / cellSize;
+	}
+
+	return 49 * descriptorLength + 1;
 }
 
 void CFileLinesParser::ParseFilesToContainerData( const std::vector<std::string>& i_fileNames,
@@ -98,17 +121,8 @@ void CFileLinesParser::ParseFilesToMatrixData( const std::vector<std::string>& i
   std::string line;
   std::string imagefileName;
 
-  const int kNumberOfRows =static_cast<int>(i_fileNames.size()); // number of rows in matrix = nuber of files
-  
-// Descriptor dependencies: 49 (points) * descriptor_length + 1
-// lenght: SIFT 128
-//         HOG_16x8x9 9 (bins) * window.height / cell.height * window.width / cell.width = 9 * 4
-//         HOG_24x8x9 9 * 9
-//         HOG_24x8x6 6 * 9
-//         HOG_24x6x6 12 * 9
-//         HOG_36x8x9 8 * 16
-  const int kNumberOfColumns = 49 * 128 + 1;
-//  const int kNumberOfColumns = 5;
+  const int kNumberOfRows = static_cast<int>(i_fileNames.size()); // number of rows in matrix = nuber of files
+  const int kNumberOfColumns = numberOfColumns();
   cv::Mat_<double> resultMat(kNumberOfRows, kNumberOfColumns, CV_64FC1);
   
   unsigned int currentLineCoordinatesQuantity = 0;
@@ -117,8 +131,6 @@ void CFileLinesParser::ParseFilesToMatrixData( const std::vector<std::string>& i
   {
     int rowNumber = numberOfRowFromFileName(linesGetter.GetCurrentFileName());
     int lineNumber = linesGetter.GetCurrentLineNumber() - 1;
-//    
-//    currentLineCoordinatesQuantity = 0;
     
     if ( line.empty() )
     {
@@ -136,8 +148,6 @@ void CFileLinesParser::ParseFilesToMatrixData( const std::vector<std::string>& i
       
       resultMat(rowNumber, lineNumber) = matValue;
     }
-    
-//    BOOST_ASSERT( currentLineCoordinatesQuantity <= 1 );
   }
   std::cout<<currentLineCoordinatesQuantity<<std::endl;
   o_mat = resultMat;

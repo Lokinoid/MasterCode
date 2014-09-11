@@ -32,7 +32,7 @@ detectorParameters:
     descriptorParameters:
         name: HOG
         windowSize: 16
-        strideSize: 8
+        strideSize: 8 # usually the same as cell size
         cellSize: 8
         binSize: 9
 # Number of training iterations
@@ -60,7 +60,7 @@ trackerParameters:
     descriptorParameters:
         name: HOG
         windowSize: 16
-        strideSize: 8
+        strideSize: 8 # usually the same as cell size
         cellSize: 8
         binSize: 9
 # Number of training iterations
