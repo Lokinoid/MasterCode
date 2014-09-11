@@ -52,12 +52,69 @@ c:\users\stanislav\documents\visual studio 2013\projects\trainer\trainer\debug\c
 c:\users\stanislav\documents\visual studio 2013\projects\trainer\trainer\debug\configurationtester.obj
 c:\users\stanislav\documents\visual studio 2013\projects\trainer\trainer\debug\descriptorconfighog.obj
 c:\users\stanislav\documents\visual studio 2013\projects\trainer\trainer\debug\descriptorconfigurationfactory.obj
+e:\fun\projects\trainer\trainer\debug\vc120.pdb
+e:\fun\projects\trainer\trainer\debug\vc120.idb
+e:\fun\projects\trainer\trainer\debug\imagewriter.obj
+e:\fun\projects\trainer\trainer\debug\landmarkcollectiondata.obj
+e:\fun\projects\trainer\trainer\debug\landmarktester.obj
+e:\fun\projects\trainer\trainer\debug\llssolver.obj
+e:\fun\projects\trainer\trainer\debug\main.obj
+e:\fun\projects\trainer\trainer\debug\maincontroller.obj
+e:\fun\projects\trainer\trainer\debug\mathelper.obj
+e:\fun\projects\trainer\trainer\debug\noiseproducer.obj
+e:\fun\projects\trainer\trainer\debug\procrustestransformer.obj
+e:\fun\projects\trainer\trainer\debug\siftdescriptor.obj
+e:\fun\projects\trainer\trainer\debug\starfeature.obj
+e:\fun\projects\trainer\trainer\debug\statisticproduser.obj
+e:\fun\projects\trainer\trainer\debug\statistictester.obj
+e:\fun\projects\trainer\trainer\debug\testfunctionfeature.obj
+e:\fun\projects\trainer\trainer\debug\testfunctionlandmarkdata.obj
+e:\fun\projects\trainer\trainer\debug\testmanager.obj
+e:\fun\projects\trainer\trainer\debug\trackerconfig.obj
+e:\fun\projects\trainer\trainer\debug\traineddata.obj
+e:\fun\projects\trainer\trainer\debug\traineddatatest.obj
+e:\fun\projects\trainer\trainer\debug\trainingtest.obj
+e:\fun\projects\trainer\trainer\debug\descriptorconfigurator.obj
+e:\fun\projects\trainer\trainer\debug\descriptortester.obj
+e:\fun\projects\trainer\trainer\debug\detector.obj
+e:\fun\projects\trainer\trainer\debug\detectorconfig.obj
+e:\fun\projects\trainer\trainer\debug\equationdata.obj
+e:\fun\projects\trainer\trainer\debug\externalsolverconfig.obj
+e:\fun\projects\trainer\trainer\debug\facefeature.obj
+e:\fun\projects\trainer\trainer\debug\filedatapersister.obj
+e:\fun\projects\trainer\trainer\debug\filefinder.obj
+e:\fun\projects\trainer\trainer\debug\filelinesgetter.obj
+e:\fun\projects\trainer\trainer\debug\filelinesparser.obj
+e:\fun\projects\trainer\trainer\debug\hogdescriptor.obj
+e:\fun\projects\trainer\trainer\debug\hogsource.obj
+e:\fun\projects\trainer\trainer\debug\imagecollectiondevider.obj
+e:\fun\projects\trainer\trainer\debug\imagecollectionmerger.obj
+e:\fun\projects\trainer\trainer\debug\imagecollectionmultiplier.obj
+e:\fun\projects\trainer\trainer\debug\imagelandmarkdata.obj
+e:\fun\projects\trainer\trainer\debug\imagepainter.obj
+e:\fun\projects\trainer\trainer\debug\imagepicker.obj
+e:\fun\projects\trainer\trainer\debug\imagetransformer.obj
+e:\fun\projects\trainer\trainer\debug\cascadeclassifier.obj
+e:\fun\projects\trainer\trainer\debug\checkqualityconfig.obj
+e:\fun\projects\trainer\trainer\debug\classifiertester.obj
+e:\fun\projects\trainer\trainer\debug\classifiertrainer.obj
+e:\fun\projects\trainer\trainer\debug\configbase.obj
+e:\fun\projects\trainer\trainer\debug\configurationelement.obj
+e:\fun\projects\trainer\trainer\debug\configurationkeypaths.obj
+e:\fun\projects\trainer\trainer\debug\configurationmanager.obj
+e:\fun\projects\trainer\trainer\debug\configurationparser.obj
+e:\fun\projects\trainer\trainer\debug\configurationtester.obj
+e:\fun\projects\trainer\trainer\debug\descriptorconfighog.obj
+e:\fun\projects\trainer\trainer\debug\descriptorconfigurationfactory.obj
 c:\users\stanislav\documents\visual studio 2013\projects\trainer\debug\trainer.ilk
 c:\users\stanislav\documents\visual studio 2013\projects\trainer\debug\trainer.exe
 c:\users\stanislav\documents\visual studio 2013\projects\trainer\debug\trainer.pdb
-c:\users\stanislav\documents\visual studio 2013\projects\trainer\trainer\debug\trainer.tlog\cl.command.1.tlog
-c:\users\stanislav\documents\visual studio 2013\projects\trainer\trainer\debug\trainer.tlog\cl.read.1.tlog
-c:\users\stanislav\documents\visual studio 2013\projects\trainer\trainer\debug\trainer.tlog\cl.write.1.tlog
-c:\users\stanislav\documents\visual studio 2013\projects\trainer\trainer\debug\trainer.tlog\link.command.1.tlog
-c:\users\stanislav\documents\visual studio 2013\projects\trainer\trainer\debug\trainer.tlog\link.read.1.tlog
-c:\users\stanislav\documents\visual studio 2013\projects\trainer\trainer\debug\trainer.tlog\link.write.1.tlog
+e:\fun\projects\trainer\debug\trainer.ilk
+e:\fun\projects\trainer\debug\trainer.exe
+e:\fun\projects\trainer\debug\trainer.pdb
+e:\fun\projects\trainer\trainer\debug\trainer.tlog\cl.command.1.tlog
+e:\fun\projects\trainer\trainer\debug\trainer.tlog\cl.read.1.tlog
+e:\fun\projects\trainer\trainer\debug\trainer.tlog\cl.write.1.tlog
+e:\fun\projects\trainer\trainer\debug\trainer.tlog\link.command.1.tlog
+e:\fun\projects\trainer\trainer\debug\trainer.tlog\link.read.1.tlog
+e:\fun\projects\trainer\trainer\debug\trainer.tlog\link.write.1.tlog
