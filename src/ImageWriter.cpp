@@ -38,9 +38,7 @@ const std::string ImageWriter::GeneratePath(const std::string& directory)
   boost::filesystem::path fullPath(directory);
   fullPath /= fileName;
 
-  //! change
-  // return fullPath.native();
-  return std::string();
+  return fullPath.string();
 }
 
 ImageWriter* ImageWriter::sharedInstance()

@@ -90,9 +90,13 @@ const std::string ImagePicker::fullPathForFileName(const std::string& filename)
     path fullPath = path(m_directory);
     fullPath /= path(filename);
     
-    BOOST_ASSERT(boost::filesystem::exists(fullPath));
+    if (!boost::filesystem::exists(fullPath))
+    {
+        std::cout << "File path: " << fullPath << std::endl;
+        BOOST_ASSERT(boost::filesystem::exists(fullPath));
+    }
     
-    return std::string(fullPath.string());
+    return fullPath.string();
 }
 
 const ImagePicker::FileNameContainerPtr ImagePicker::fetchFileNames()

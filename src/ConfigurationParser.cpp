@@ -53,7 +53,7 @@ std::shared_ptr<CurrentConfiguration> ConfigurationParser::parse()
         storage[keyPath] >> *parameterValue;
         if (parameterValue->length() == 0)
         {
-            std::cout << "Empty value for key path" << keyPath << std::endl;
+            std::cout << "Empty value for key path: " << keyPath << std::endl;
             break;
         }
         
